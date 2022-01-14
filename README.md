@@ -5,6 +5,12 @@ firstly run roscore
 
 $ git clone https://github.com/CodeWithJo/MobileRobotics.git
 
+$ cd ~/FinalProject_ws
+
+$ catkin_make
+
+$ rosdep install --from-paths src --ignore-src -r -y
+
 $ cd FinalProject_ws
 
 $ source devel/setup.bash
