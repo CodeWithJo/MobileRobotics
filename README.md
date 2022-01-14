@@ -1,5 +1,5 @@
 # MobileRobotics
 Msc Robotic Final Project at Middlesex University 2022
 
-roscore 
+firstly run roscore 
 https://github.com/CodeWithJo/MobileRobotics.git
