@@ -1,8 +1,0 @@
-prefix=/home/ja1411/FinalProject_ws/devel
-
-Name: wheeledrobot
-Description: Description of wheeledrobot
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
