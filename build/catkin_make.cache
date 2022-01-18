@@ -1,0 +1,2 @@
+follow_waypoints:wheeledrobot
+-DCATKIN_DEVEL_PREFIX=/home/ja1411/FinalProject_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ja1411/FinalProject_ws/install -G Unix Makefiles

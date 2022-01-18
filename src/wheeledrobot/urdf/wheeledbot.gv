@@ -1,0 +1,47 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"body_link" [label="body_link"];
+"camera_link" [label="camera_link"];
+"camera_depth_frame" [label="camera_depth_frame"];
+"camera_rgb_frame" [label="camera_rgb_frame"];
+"front_left_wheel" [label="front_left_wheel"];
+"front_right_wheel" [label="front_right_wheel"];
+"range_fl" [label="range_fl"];
+"range_fr" [label="range_fr"];
+"range_rl" [label="range_rl"];
+"range_rr" [label="range_rr"];
+"rear_left_wheel" [label="rear_left_wheel"];
+"rear_right_wheel" [label="rear_right_wheel"];
+"laser" [label="laser"];
+"top" [label="top"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_link_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"base_link_joint" -> "body_link"
+"body_link" -> "astra_joint" [label="xyz: -0.03 0 0.18 \nrpy: 0 -0 0"]
+"astra_joint" -> "camera_link"
+"camera_link" -> "camera_depth_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -5.55112e-17 -1.5708"]
+"camera_depth_joint" -> "camera_depth_frame"
+"camera_link" -> "camera_optical_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -5.55112e-17 -1.5708"]
+"camera_optical_joint" -> "camera_rgb_frame"
+"body_link" -> "front_left_wheel_hinge" [label="xyz: 0.05 0.11 0 \nrpy: 0 -0 0"]
+"front_left_wheel_hinge" -> "front_left_wheel"
+"body_link" -> "front_right_wheel_hinge" [label="xyz: 0.05 -0.11 0 \nrpy: 0 -0 0"]
+"front_right_wheel_hinge" -> "front_right_wheel"
+"body_link" -> "range_fl_joint" [label="xyz: 0.1 0.05 0.01 \nrpy: 0 -0 0.13"]
+"range_fl_joint" -> "range_fl"
+"body_link" -> "range_fr_joint" [label="xyz: 0.1 -0.05 0.01 \nrpy: 0 0 -0.13"]
+"range_fr_joint" -> "range_fr"
+"body_link" -> "range_rl_joint" [label="xyz: -0.1 0.05 0.01 \nrpy: 0 -0 3.01"]
+"range_rl_joint" -> "range_rl"
+"body_link" -> "range_rr_joint" [label="xyz: -0.1 -0.05 0.01 \nrpy: 0 -0 -3.01319"]
+"range_rr_joint" -> "range_rr"
+"body_link" -> "rear_left_wheel_hinge" [label="xyz: -0.055 0.11 0 \nrpy: 0 -0 0"]
+"rear_left_wheel_hinge" -> "rear_left_wheel"
+"body_link" -> "rear_right_wheel_hinge" [label="xyz: -0.055 -0.11 0 \nrpy: 0 -0 0"]
+"rear_right_wheel_hinge" -> "rear_right_wheel"
+"body_link" -> "rplidar_joint" [label="xyz: 0.02 0 0.058 \nrpy: 0 -0 3.14"]
+"rplidar_joint" -> "laser"
+"body_link" -> "top_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"top_joint" -> "top"
+}

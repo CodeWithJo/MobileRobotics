@@ -1,0 +1,8 @@
+prefix=/home/ja1411/FinalProject_ws/install
+
+Name: wheeledrobot
+Description: Description of wheeledrobot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

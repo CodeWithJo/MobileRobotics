@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find wheeledrobot)/launch/wheeledbot.launch"></include>
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find wheeledrobot)/urdf/wheeledbot.xacro'"/>
+
+  <!-- Show in Rviz   -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find wheeledrobot)/rviz/wheeledbot.rviz" required="true" output="screen"/>
+
+</launch>
