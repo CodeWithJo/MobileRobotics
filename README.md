@@ -26,10 +26,14 @@ $ rostopic pub /start_journey std_msgs/Empty -1
 Altenatively download the bash files 
 Open a new terminal run them from home folder 
 
-If you have git cloned the poject 
+If you have git cloned the project 
+
 $ ./run_map_rviz_auto.sh
+
 $ ./move_around.sh 
 
 If you have not git cloned the project you can run 
+
 $ ./git_clone_project_and_run_map_rviz_auto.sh
+
 $././move_around.sh 
