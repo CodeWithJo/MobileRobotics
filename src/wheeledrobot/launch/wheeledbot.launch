@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launch>
-
-  <include file="$(find wheeledrobot)/launch/my_world.launch"></include>
-
-  <include file="$(find wheeledrobot)/launch/wheeledbot_gazebo.launch"></include>
-
-</launch>

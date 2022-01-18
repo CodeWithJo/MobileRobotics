@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-  <include file="$(find wheeledrobot)/launch/wheeledbot_rviz.launch"></include>
-
-  <include file="$(find wheeledrobot)/launch/gmapping.launch"></include>
-
-</launch>
